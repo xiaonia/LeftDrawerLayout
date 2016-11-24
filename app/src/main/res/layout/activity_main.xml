@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/iv_main_story"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="false" />
+
+    <demo.xuqingqi.leftdrawerlayout.drawer.LeftDrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <demo.xuqingqi.leftdrawerlayout.drawer.DrawerView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.NavigationView
+                android:id="@+id/navigation_view"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                app:headerLayout="@layout/header"
+                app:menu="@menu/drawer"
+                app:insetForeground="@android:color/transparent" />
+
+        </demo.xuqingqi.leftdrawerlayout.drawer.DrawerView>
+
+        <demo.xuqingqi.leftdrawerlayout.drawer.ContentView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@android:color/transparent">
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_main">
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true">
+
+                <include
+                    layout="@layout/layout_head_bar_main_activity"/>
+
+            </FrameLayout>
+
+        </demo.xuqingqi.leftdrawerlayout.drawer.ContentView>
+
+    </demo.xuqingqi.leftdrawerlayout.drawer.LeftDrawerLayout>
+
+</FrameLayout>

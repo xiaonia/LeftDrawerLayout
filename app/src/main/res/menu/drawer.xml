@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/zuki_narrative"
+            android:checked="false"
+            android:title="home" />
+
+        <item
+            android:id="@+id/goals"
+            android:checked="false"
+            android:title="goals" />
+
+        <item
+            android:id="@+id/activities"
+            android:checked="false"
+            android:title="activities" />
+
+        <item
+            android:id="@+id/settings"
+            android:checked="false"
+            android:title="@string/action_settings" />
+
+    </group>
+
+</menu>
